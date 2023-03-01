@@ -1,5 +1,6 @@
 import 'package:company_test2/constants.dart';
 import 'package:company_test2/widgets/post_card.dart';
+import 'package:company_test2/widgets/spam_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
 import 'package:outline_search_bar/outline_search_bar.dart';
@@ -22,8 +23,9 @@ class _MyPostScreen extends State<MyPostScreen> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         centerTitle: true,
-        title: const Text('Spams'),
+        title: const Text('My Post'),
       ),
+      drawer: const SpamDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -107,7 +109,13 @@ List<PostCard> _allPosts = [
     heading: 'Duis aute irure dolor',
   ),
   PostCard(
-    heading: 'Lorem ipsum dolor sit amet',
+    heading: 'consectetur adipiscing elit',
+  ),
+  PostCard(
+    heading: 'voluptate velit esse cillum',
+  ),
+  PostCard(
+    heading: 'officia deserunt mollit',
   ),
   PostCard(
     heading: 'Lorem ipsum dolor sit amet',
@@ -116,13 +124,7 @@ List<PostCard> _allPosts = [
     heading: 'Lorem ipsum dolor sit amet',
   ),
   PostCard(
-    heading: 'Lorem ipsum dolor sit amet',
-  ),
-  PostCard(
-    heading: 'Lorem ipsum dolor sit amet',
-  ),
-  PostCard(
-    heading: 'Lorem ipsum dolor sit amet',
+    heading: 'tempor incididunt ut',
   ),
   PostCard(
     heading: 'Lorem ipsum dolor sit amet',
@@ -139,20 +141,12 @@ List<PostCard> _allPosts = [
 ];
 
 class _LazyLoaderListviewState extends State<LazyLoaderListview> {
-  void filterPosts(String query) {
-    setState(() {
-      widget.filteredPosts = _allPosts
-          .where((post) =>
-              post.heading.toLowerCase().contains(query.toLowerCase()))
-          .toList();
-    });
-  }
+
 
   @override
   void initState() {
     super.initState();
     widget.filteredPosts = List<PostCard>.from(_allPosts);
-    filterPosts('');
   }
 
   @override

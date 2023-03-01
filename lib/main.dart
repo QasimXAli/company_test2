@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         theme: regularTheme,
         darkTheme: darkTheme,
         themeMode: themeMode,
-        initialRoute: '/SpamScreen',
+        initialRoute: '/',
         routes: {
           '/': (context) => const LoginScreen(), //done
           '/MyPostScreen': (context) => const MyPostScreen(), //done
