@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/SpamScreen',
         routes: {
           '/': (context) => const LoginScreen(), //done
-          // '/MyPostScreen': (context) => const MyPostScreen(), //done
+          '/MyPostScreen': (context) => const MyPostScreen(), //done
           '/ContactUsScreen': (context) => const ContactUsScreen(), //done
           '/CommentsScreen': (context) => const CommentsScreen(), //done
           '/MyProfileScreen': (context) => const MyProfileScreen(), //done
