@@ -82,7 +82,7 @@ class _MyPostScreen extends State<MyPostScreen> {
 class LazyLoaderListview extends StatefulWidget {
   String? value;
 
-  LazyLoaderListview(
+   LazyLoaderListview(
       {super.key, required this.value, required this.filteredPosts});
 
   List<PostCard> filteredPosts;
@@ -141,8 +141,6 @@ List<PostCard> _allPosts = [
 ];
 
 class _LazyLoaderListviewState extends State<LazyLoaderListview> {
-
-
   @override
   void initState() {
     super.initState();
